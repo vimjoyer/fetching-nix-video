@@ -7,11 +7,24 @@ pkgs.lib.fakeHash
 ```
 
 ## Nurl 
-```nix
+
+```bash
 nix shell nixpkgs#nurl
 nurl "https://github.com/vimjoyer/flake-starter-config"
+# or use nix run
+nix run nixpkgs#nurl -- "https://github.com/vimjoyer/flake-starter-config"
 ```
-or use nix run
+
+`nurl` will output:
+
+```nix
+fetchFromGitHub {
+  owner = "vimjoyer";
+  repo = "flake-starter-config";
+  rev = "55521689415027356800947e91690271be4a1c10";
+  hash = "sha256-SgQdHZMpqbC2k8ZQg0PvYY8OnsNRBYVgXS+dQX5pqkU=";
+}
+```
 
 ## Fetching flake example
 ```nix

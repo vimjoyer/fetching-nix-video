@@ -1,7 +1,9 @@
 ## Fake hash
 
 ```nix
-sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+"sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+# or instead of learning it, use
+pkgs.lib.fakeHash
 ```
 
 ## Nurl 
